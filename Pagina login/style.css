@@ -1,0 +1,101 @@
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #0b0b18;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caixa principal do login */
+.caixa-login {
+    width: 300px;
+    padding: 25px 15px;
+
+    background: #111222;
+    border: 1px solid #5425a8;
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 0 15px rgba(90, 30, 255, 0.08);
+}
+
+/* Ícone de cadeado */
+.icone {
+    color: #8250ff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Título Entrar */
+.caixa-login h1 {
+    color: #c5adff;
+    font-size: 22px;
+    margin: 5px 0;
+}
+
+/* Texto abaixo do título */
+.caixa-login p {
+    color: #aaaabd;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+/* Campos de usuário e senha */
+.caixa-login input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px;
+    margin-bottom: 10px;
+
+    background: #1b1e31;
+    border: 1px solid #292d45;
+    border-radius: 6px;
+
+    color: white;
+    font-size: 13px;
+    outline: none;
+}
+
+/* Cor do texto de orientação */
+.caixa-login input::placeholder {
+    color: #9296b0;
+}
+
+/* Borda do campo ao clicar */
+.caixa-login input:focus {
+    border-color: #7040ff;
+}
+
+/* Botão Entrar */
+.caixa-login button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px;
+    margin-top: 5px;
+
+    background: #7040ff;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+
+    transition: background 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.caixa-login button:hover {
+    background: #895cff;
+}
