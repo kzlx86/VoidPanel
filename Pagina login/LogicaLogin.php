@@ -1,29 +1,39 @@
+
 <?php
+
 session_start();
-require "Conexao.php";
+
+require_once __DIR__ . "/../config/database.php";
 
 $usuario = $_POST["usuario"] ?? "";
 $senha = $_POST["senha"] ?? "";
 
-$sql = $conexao->prepare(
-    "SELECT id, usuario, senha FROM usuarios WHERE usuario = ?"
+if ($usuario == "" || $senha == "") {
+    exit("Preencha todos os campos!");
+}
+
+$sql = $pdo->prepare(
+    "SELECT USU_ID, USUARIO, SENHA
+     FROM usuarios
+     WHERE USUARIO = ?"
 );
 
-$sql->bind_param("s", $usuario);
-$sql->execute();
+$sql->execute([$usuario]);
 
-$resultado = $sql->get_result();
-$conta = $resultado->fetch_assoc();
+$conta = $sql->fetch();
 
-if ($conta && password_verify($senha, $conta["senha"])) {
+if ($conta && password_verify($senha, $conta["SENHA"])) {
+
     session_regenerate_id(true);
 
-    $_SESSION["id"] = $conta["id"];
-    $_SESSION["usuario"] = $conta["usuario"];
+    $_SESSION["id"] = $conta["USU_ID"];
+    $_SESSION["usuario"] = $conta["USUARIO"];
 
-    header("Location: Painel.php");
+    header("Location: ../view.html");
     exit;
+
 } else {
     echo "Usuário ou senha incorretos!";
 }
+
 ?>

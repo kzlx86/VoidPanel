@@ -99,3 +99,19 @@ body {
 .caixa-login button:hover {
     background: #895cff;
 }
+.criar_conta {
+    color: #aaaabd;
+    font-size: 13px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.criar_conta a {
+    color: #8250ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.criar_conta a:hover {
+    text-decoration: underline;
+}

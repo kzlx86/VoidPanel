@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -9,7 +10,7 @@ body {
     align-items: center;
 }
 
-/* Caixa principal do login /
+/* Caixa principal do login */
 .caixa-cadastro {
     width: 300px;
     padding: 25px 15px;
@@ -29,21 +30,21 @@ body {
     margin-bottom: 10px;
 }
 
-/ Título Entrar /
+/* Título Entrar */
 .caixa-cadastro h1 {
     color: #c5adff;
     font-size: 22px;
     margin: 5px 0;
 }
 
-/ Texto abaixo do título /
+/* Texto abaixo do título */
 .caixa-cadastro p {
     color: #aaaabd;
     font-size: 12px;
     margin-bottom: 20px;
 }
 
-/ Campos de usuário e senha /
+/* Campos de usuário e senha */
 .caixa-cadastro input {
     display: block;
     width: 100%;
@@ -61,17 +62,17 @@ body {
     outline: none;
 }
 
-/ Cor do texto de orientação /
+/* Cor do texto de orientação */
 .caixa-cadastro input::placeholder {
     color: #9296b0;
 }
 
-/ Borda do campo ao clicar /
+/* Borda do campo ao clicar */
 .caixa-cadastro input:focus {
     border-color: #7040ff;
 }
 
-/ Botão Entrar /
+/* Botão Entrar */
 .caixa-cadastro button {
     display: block;
     width: 100%;
@@ -93,7 +94,7 @@ body {
     transition: background 0.3s;
 }
 
-/ Efeito ao passar o mouse */
+/* Efeito ao passar o mouse */
 .caixa-cadastro button:hover {
     background: #895cff;
 }
